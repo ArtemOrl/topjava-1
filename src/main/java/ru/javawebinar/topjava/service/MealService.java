@@ -1,20 +1,23 @@
 package ru.javawebinar.topjava.service;
 
+import org.springframework.lang.Nullable;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.List;
+
+import static ru.javawebinar.topjava.util.DateTimeUtil.adjustEndDateTime;
+import static ru.javawebinar.topjava.util.DateTimeUtil.adjustStartDateTime;
 
 public interface MealService {
     Meal get(int id, int userId) throws NotFoundException;
 
     void delete(int id, int userId) throws NotFoundException;
 
-    default List<Meal> getBetweenDates(LocalDate startDate, LocalDate endDate, int userId) {
-        return getBetweenDateTimes(LocalDateTime.of(startDate, LocalTime.MIN), LocalDateTime.of(endDate, LocalTime.MAX), userId);
+    default List<Meal> getBetweenDates(@Nullable LocalDate startDate, @Nullable LocalDate endDate, int userId) {
+        return getBetweenDateTimes(adjustStartDateTime(startDate), adjustEndDateTime(endDate), userId);
     }
 
     List<Meal> getBetweenDateTimes(LocalDateTime startDateTime, LocalDateTime endDateTime, int userId);

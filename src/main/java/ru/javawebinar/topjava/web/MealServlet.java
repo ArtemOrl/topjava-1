@@ -2,10 +2,8 @@ package ru.javawebinar.topjava.web;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.util.StringUtils;
 import ru.javawebinar.topjava.model.Meal;
-import ru.javawebinar.topjava.repository.MealRepository;
-import ru.javawebinar.topjava.repository.inmemory.InMemoryMealRepositoryImpl;
-import ru.javawebinar.topjava.util.MealsUtil;
 import ru.javawebinar.topjava.web.meal.MealRestController;
 
 import javax.servlet.ServletConfig;
@@ -51,7 +49,7 @@ public class MealServlet extends HttpServlet {
                     request.getParameter("description"),
                     Integer.parseInt(request.getParameter("calories")));
 
-            if (request.getParameter("id").isEmpty()) {
+            if (StringUtils.isEmpty(request.getParameter("id"))) {
                 mealController.create(meal);
             } else {
                 mealController.update(meal, getId(request));

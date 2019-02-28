@@ -8,18 +8,12 @@
     <bean class="ru.javawebinar.topjava.repository.inmemory.InMemoryUserRepositoryImpl" id="inmemoryUserRepository"/>
 
     <bean class="ru.javawebinar.topjava.service.UserServiceImpl">
-        <property name="repository" ref="inmemoryUserRepository"/>
+        <constructor-arg name="repository" ref="inmemoryUserRepository"/>
     </bean>
 -->
 
     <!-- Not necessary, already included with component-scan -->
     <!--<context:annotation-config/>-->
-
-    <!--Здесь весь inmemory компонент для создания бинов-->
-    <!--<context:component-scan base-package="ru.javawebinar.topjava.repository.inmemory"/>-->
-    <!--<context:component-scan base-package="ru.javawebinar.**.repository.inmemory"/>-->
-
-    <context:component-scan base-package="ru.javawebinar.**.repository.jdbc"/>
 
     <context:component-scan base-package="ru.javawebinar.**.service"/>
 

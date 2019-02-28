@@ -1,9 +1,10 @@
 package ru.javawebinar.topjava.model;
 
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-
 
 public class Meal extends AbstractBaseEntity {
     private LocalDateTime dateTime;
@@ -12,13 +13,12 @@ public class Meal extends AbstractBaseEntity {
 
     private int calories;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 
     public Meal() {
     }
 
-    public Meal(Meal m){
-        this(m.getId(), m.getDateTime(), m.getDescription(), m.getCalories());
-    }
     public Meal(LocalDateTime dateTime, String description, int calories) {
         this(null, dateTime, description, calories);
     }
@@ -30,7 +30,25 @@ public class Meal extends AbstractBaseEntity {
         this.calories = calories;
     }
 
-    //setter
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public LocalDate getDate() {
+        return dateTime.toLocalDate();
+    }
+
+    public LocalTime getTime() {
+        return dateTime.toLocalTime();
+    }
 
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
@@ -44,33 +62,13 @@ public class Meal extends AbstractBaseEntity {
         this.calories = calories;
     }
 
-    // getter
-    public LocalDateTime getDateTime() {
-        return dateTime;
+    public User getUser() {
+        return user;
     }
 
-    public LocalDate getDate() {
-        return dateTime.toLocalDate();
+    public void setUser(User user) {
+        this.user = user;
     }
-
-    public LocalTime getTime() {
-        return dateTime.toLocalTime();
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getCalories() {
-        return calories;
-    }
-
-
-    public boolean isNew() {
-        return id == null;
-    }
-
-
 
     @Override
     public String toString() {
@@ -81,6 +79,4 @@ public class Meal extends AbstractBaseEntity {
                 ", calories=" + calories +
                 '}';
     }
-
-
 }
