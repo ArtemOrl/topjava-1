@@ -15,6 +15,42 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+/*
+ @Override
+    public Meal save(Meal meal, int userId) {
+        Objects.requireNonNull(meal, "meal must not be null");
+        Map<Integer, Meal> meals = repository.computeIfAbsent(userId, ConcurrentHashMap::new);
+        var meals = repository.computeIfAbsent(userId, ConcurrentHashMap::new);
+        if (meal.isNew()) {
+            meal.setId(counter.incrementAndGet());
+            meals.put(meal.getId(), meal);
+
+
+    @Override
+    public boolean delete(int id, int userId) {
+        Map<Integer, Meal> meals = repository.get(userId);
+        var meals = repository.get(userId);
+        return meals != null && meals.remove(id) != null;
+    }
+
+    @Override
+    public Meal get(int id, int userId) {
+        Map<Integer, Meal> meals = repository.get(userId);
+        var meals = repository.get(userId);
+        return meals == null ? null : meals.get(id);
+    }
+
+
+    }
+
+    private List<Meal> getAllFiltered(int userId, Predicate<Meal> filter) {
+        Map<Integer, Meal> meals = repository.get(userId);
+        var meals = repository.get(userId);
+        return CollectionUtils.isEmpty(meals) ? Collections.emptyList() :
+                meals.values().stream()
+                        .filter(filter)
+ */
+
 @Repository
 public class InMemoryMealRepositoryImpl implements MealRepository {
     private static final Logger log = LoggerFactory.getLogger(InMemoryMealRepositoryImpl.class);
