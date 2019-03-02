@@ -1,16 +1,35 @@
 package ru.javawebinar.topjava.model;
 
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+@NamedQueries({
+        @NamedQuery(name = Meal.DELETE, query = "DELETE FROM Meal m WHERE m.id=:id and m.user=:user"),
+        @NamedQuery(name = Meal.ALL_SORTED, query = "SELECT m FROM Meal m WHERE m.user=?1 order by m.dateTime desc"),
+})
+
+@Entity
+@Transactional
+@Table(name = "meals", uniqueConstraints = {@UniqueConstraint(columnNames = "date_time", name = "dateTime")})
 public class Meal extends AbstractBaseEntity {
+
+    public static final String ALL_SORTED = "Meal.getAllSorted";
+    public static final String DELETE = "Meal.delete";
+
+    @Column(name = "date_time", nullable = false)
+//    @NotBlank
     private LocalDateTime dateTime;
 
+    @Column(name = "description", nullable = false)
+    @NotBlank
     private String description;
 
+    @Column(name = "calories")
     private int calories;
 
     @ManyToOne(fetch = FetchType.LAZY)
