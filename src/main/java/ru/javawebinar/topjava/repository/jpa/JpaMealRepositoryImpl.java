@@ -1,5 +1,6 @@
-package ru.javawebinar.topjava.repository.jpa;
-
+/*
+package ru.javawebinar.topjava.repository.jpa;*/
+/*
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.model.Meal;
@@ -66,8 +67,8 @@ public class JpaMealRepositoryImpl implements MealRepository {
                 .setParameter("endDate", endDate).getResultList();
     }
 }
+*/
 
-/*
 package ru.javawebinar.topjava.repository.jpa;
 
 import org.springframework.stereotype.Repository;
@@ -133,4 +134,3 @@ public class JpaMealRepositoryImpl implements MealRepository {
                 .setParameter("endDate", endDate).getResultList();
     }
 }
- */
