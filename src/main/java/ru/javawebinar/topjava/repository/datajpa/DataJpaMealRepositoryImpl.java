@@ -30,6 +30,7 @@ public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
 
     @Override
     public boolean delete(int id, int userId) {
+
         return crudMealRepository.delete(id, userId) != 0;
     }
 
