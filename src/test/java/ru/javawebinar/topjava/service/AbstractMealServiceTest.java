@@ -37,7 +37,7 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 @ActiveProfiles(resolver = ActiveDbProfileResolver.class)
 // For HSQLDB
 //@ActiveProfiles("hsqldb")
-public class MealServiceTest {
+public class AbstractMealServiceTest {
     private static final Logger log = getLogger("result");
 
     private static StringBuilder results = new StringBuilder();
