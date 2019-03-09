@@ -18,7 +18,7 @@ public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
     @Autowired
     private CrudUserRepository crudUserRepository;
 
-    @Override
+
     @Transactional
     public Meal save(Meal meal, int userId) {
         if (!meal.isNew() && get(meal.getId(), userId) == null) {
@@ -33,7 +33,7 @@ public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
         return crudMealRepository.delete(id, userId) != 0;
     }
 
-    @Override
+
     public Meal get(int id, int userId) {
         return crudMealRepository.findById(id).filter(meal -> meal.getUser().getId() == userId).orElse(null);
     }
