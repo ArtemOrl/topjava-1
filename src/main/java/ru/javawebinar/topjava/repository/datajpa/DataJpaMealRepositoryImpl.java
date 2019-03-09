@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
-public class DataJpaMealRepositoryImpl implements MealRepository {
+public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
 
     @Autowired
     private CrudMealRepository crudMealRepository;
