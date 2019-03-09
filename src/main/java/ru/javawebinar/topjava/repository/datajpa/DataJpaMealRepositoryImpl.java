@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.model.Meal;
-import ru.javawebinar.topjava.repository.MealRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
-public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
+public class DataJpaMealRepositoryImpl implements CrudMealRepository  {
 
     @Autowired
     private CrudMealRepository crudMealRepository;
@@ -18,6 +17,10 @@ public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
     @Autowired
     private CrudUserRepository crudUserRepository;
 
+    @Override
+    public Meal save(Meal item) {
+        return null;
+    }
 
     @Transactional
     public Meal save(Meal meal, int userId) {
@@ -30,8 +33,7 @@ public abstract class DataJpaMealRepositoryImpl implements CrudMealRepository  {
 
     @Override
     public boolean delete(int id, int userId) {
-
-        return crudMealRepository.delete(id, userId) != 0;
+        return crudMealRepository.delete(id, userId)!=0;
     }
 
 
