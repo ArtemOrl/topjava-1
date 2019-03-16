@@ -1,10 +1,12 @@
 package ru.javawebinar.topjava.repository.jpa;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.repository.MealRepository;
+import ru.javawebinar.topjava.repository.UserRepository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -61,5 +63,15 @@ public class JpaMealRepositoryImpl implements MealRepository {
                 .setParameter("userId", userId)
                 .setParameter("startDate", startDate)
                 .setParameter("endDate", endDate).getResultList();
+    }
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @Transactional
+    public Meal getWithUser(Integer id, Integer userID){
+        Meal meal = get(id, userID);
+        meal.setUser(userRepository.get(userID));
+        return meal;
     }
 }

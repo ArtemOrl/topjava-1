@@ -55,4 +55,10 @@ public class DataJpaMealRepositoryImpl implements MealRepository {
         return crudRepository.getBetween(startDate, endDate, userId);
     }
 
+    @Override
+    @Transactional
+    public Meal getWithUser(int id, int userId) {
+        return crudRepository.getWithUser(id, userId);
+    }
+
 }
