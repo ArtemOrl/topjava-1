@@ -40,7 +40,7 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 @ActiveProfiles(resolver = ActiveDbProfileResolver.class)
 // For HSQLDB
 //@ActiveProfiles("hsqldb")
-public class AbstractMealServiceTest extends AbstractServiceTest{
+public abstract class AbstractMealServiceTest extends AbstractServiceTest{
     private static final Logger log = getLogger("result");
 
     private static StringBuilder results = new StringBuilder();
