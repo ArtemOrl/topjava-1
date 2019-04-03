@@ -1,0 +1,31 @@
+Index: src/main/java/ru/javawebinar/topjava/service/MealServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/ru/javawebinar/topjava/service/MealServiceImpl.java	(revision 1e778ed0bfb9d8b511280d9a013fae7ce9f0b683)
++++ src/main/java/ru/javawebinar/topjava/service/MealServiceImpl.java	(date 1543410139775)
+@@ -45,6 +45,7 @@
+ 
+     @Override
+     public void update(Meal meal, int userId) {
++        Assert.notNull(meal, "meal must not be null");
+         checkNotFoundWithId(repository.save(meal, userId), meal.getId());
+     }
+ 
+Index: src/test/java/ru/javawebinar/topjava/web/user/ProfileRestControllerTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/test/java/ru/javawebinar/topjava/web/user/ProfileRestControllerTest.java	(revision 1e778ed0bfb9d8b511280d9a013fae7ce9f0b683)
++++ src/test/java/ru/javawebinar/topjava/web/user/ProfileRestControllerTest.java	(date 1543410095141)
+@@ -42,6 +42,6 @@
+                 .andDo(print())
+                 .andExpect(status().isNoContent());
+ 
+-        assertMatch(new User(userService.getByEmail("newemail@ya.ru")), updated);
++        assertMatch(userService.getByEmail("newemail@ya.ru"), updated);
+     }
+ }
+\ No newline at end of file
