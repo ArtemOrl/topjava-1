@@ -28,7 +28,7 @@
         <!--no pooling-->
         <bean id="dataSource"
               class="org.springframework.jdbc.datasource.DriverManagerDataSource"
-              p:driverClassName="${database.driverClassName}"
+              p:driverClassName="org.hsqldb.jdbcDriver"
               p:url="${database.url}"
               p:username="${database.username}"
               p:password="${database.password}"/>
@@ -39,7 +39,7 @@
 
         <bean id="dataSource"
               class="org.apache.tomcat.jdbc.pool.DataSource"
-              p:driverClassName="${database.driverClassName}"
+              p:driverClassName="org.postgresql.Driver"
               p:url="${database.url}"
               p:username="${database.username}"
               p:password="${database.password}"/>

@@ -15,8 +15,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.javawebinar.topjava.MealTestData.*;
+import static ru.javawebinar.topjava.TestUtil.readFromJson;
 import static ru.javawebinar.topjava.TestUtil.readFromJsonMvcResult;
-import static ru.javawebinar.topjava.TestUtil.readFromJsonResultActions;
 import static ru.javawebinar.topjava.UserTestData.USER;
 import static ru.javawebinar.topjava.model.AbstractBaseEntity.START_SEQ;
 import static ru.javawebinar.topjava.util.MealsUtil.createWithExcess;
@@ -63,7 +63,7 @@ class MealRestControllerTest extends AbstractControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(JsonUtil.writeValue(created)));
 
-        Meal returned = readFromJsonResultActions(action, Meal.class);
+        Meal returned = readFromJson(action, Meal.class);
         created.setId(returned.getId());
 
         assertMatch(returned, created);
@@ -76,7 +76,7 @@ class MealRestControllerTest extends AbstractControllerTest {
                 .andExpect(status().isOk())
                 .andDo(print())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                .andExpect(getToMatcher(getWithExcess(MEALS, USER.getCaloriesPerDay())));
+                .andExpect(contentJson(getWithExcess(MEALS, USER.getCaloriesPerDay())));
     }
 
     @Test
@@ -86,13 +86,13 @@ class MealRestControllerTest extends AbstractControllerTest {
                 .param("endDate", "2015-05-31").param("endTime", "11:00"))
                 .andExpect(status().isOk())
                 .andDo(print())
-                .andExpect(getToMatcher(createWithExcess(MEAL4, true), createWithExcess(MEAL1, false)));
+                .andExpect(contentJson(createWithExcess(MEAL4, true), createWithExcess(MEAL1, false)));
     }
 
     @Test
     void testFilterAll() throws Exception {
         mockMvc.perform(get(REST_URL + "filter?startDate=&endTime="))
                 .andExpect(status().isOk())
-                .andExpect(getToMatcher(getWithExcess(MEALS, USER.getCaloriesPerDay())));
+                .andExpect(contentJson(getWithExcess(MEALS, USER.getCaloriesPerDay())));
     }
 }

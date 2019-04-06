@@ -30,11 +30,11 @@ public class UserTestData {
         assertThat(actual).usingElementComparatorIgnoringFields("registered", "meals").isEqualTo(expected);
     }
 
-    public static ResultMatcher getUserMatcher(User... expected) {
+    public static ResultMatcher contentJson(User... expected) {
         return result -> assertMatch(readListFromJsonMvcResult(result, User.class), List.of(expected));
     }
 
-    public static ResultMatcher getUserMatcher(User expected) {
+    public static ResultMatcher contentJson(User expected) {
         return result -> assertMatch(readFromJsonMvcResult(result, User.class), expected);
     }
 }
