@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42bb9e91-5adc-4b0c-9986-0fb247f3aa20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="72" column="96" selection-start-line="72" selection-start-column="86" selection-end-line="72" selection-end-column="96" />
+            <state relative-caret-position="281">
+              <caret line="74" column="99" selection-start-line="74" selection-start-column="99" selection-end-line="74" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/config/messages/app.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="65" lean-forward="true" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
+              <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
             </state>
           </provider>
           <provider editor-type-id="ResourceBundle" />
@@ -67,7 +67,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/messages/app_ru.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="174" selection-start-line="1" selection-start-column="174" selection-end-line="1" selection-end-column="174" />
+            </state>
+          </provider>
           <provider editor-type-id="ResourceBundle" />
         </entry>
       </file>
@@ -174,6 +178,8 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/javawebinar/topjava/web/meal/MealRestControllerTest.java" />
         <option value="$PROJECT_DIR$/system.properties" />
         <option value="$PROJECT_DIR$/settings.xml" />
+        <option value="$PROJECT_DIR$/config/messages/app.properties" />
+        <option value="$PROJECT_DIR$/config/messages/app_ru.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml" />
       </list>
     </option>
@@ -290,7 +296,7 @@
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/config/messages" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -315,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.JsonUtilTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
     <configuration name="JsonUtilTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="topjava" />
       <extension name="coverage">
@@ -500,7 +506,7 @@
       <workItem from="1555147895417" duration="9726000" />
       <workItem from="1556707519228" duration="2795000" />
       <workItem from="1556710479437" duration="3554000" />
-      <workItem from="1556774481006" duration="8205000" />
+      <workItem from="1556774481006" duration="8714000" />
     </task>
     <task id="LOCAL-00001" summary="Before HW10 add, delete, update buttons doesn't work">
       <created>1555147959883</created>
@@ -523,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556784523832</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="heroku">
+      <created>1556785815845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1556785815845</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -559,7 +572,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26148000" />
+    <option name="totallyTimeSpent" value="26657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,7 +585,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="7" y="29" width="1666" height="963" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2518473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -585,7 +597,7 @@
       <window_info id="Image Layers" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3490566" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3490566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -593,7 +605,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32886723" />
       <window_info anchor="bottom" id="Analysis" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3278302" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3278302" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -976,21 +988,25 @@
     <entry file="file://$PROJECT_DIR$/hr.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/config/messages/app_ru.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="72" column="96" selection-start-line="72" selection-start-column="86" selection-end-line="72" selection-end-column="96" />
+        <state relative-caret-position="15">
+          <caret line="1" column="174" selection-start-line="1" selection-start-column="174" selection-end-line="1" selection-end-column="174" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/messages/app_ru.properties">
-      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="ResourceBundle" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="74" column="99" selection-start-line="74" selection-start-column="99" selection-end-line="74" selection-end-column="99" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/messages/app.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="65" lean-forward="true" selection-start-line="1" selection-start-column="65" selection-end-line="1" selection-end-column="65" />
+          <caret line="1" column="68" selection-start-line="1" selection-start-column="68" selection-end-line="1" selection-end-column="68" />
         </state>
       </provider>
       <provider editor-type-id="ResourceBundle" />
