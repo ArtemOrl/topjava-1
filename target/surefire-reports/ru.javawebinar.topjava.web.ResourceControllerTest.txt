@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.javawebinar.topjava.web.ResourceControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.52 s - in ru.javawebinar.topjava.web.ResourceControllerTest

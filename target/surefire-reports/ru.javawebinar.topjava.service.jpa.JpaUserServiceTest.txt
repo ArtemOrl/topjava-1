@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.javawebinar.topjava.service.jpa.JpaUserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.44 s - in ru.javawebinar.topjava.service.jpa.JpaUserServiceTest

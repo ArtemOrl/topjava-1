@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.javawebinar.topjava.web.user.AdminRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.124 s - in ru.javawebinar.topjava.web.user.AdminRestControllerTest
