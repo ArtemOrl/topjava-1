@@ -53,14 +53,12 @@
     </div>
 </div>
 <div class="container lead">
-    &nbsp;&nbsp;&nbsp;<a href="https://github.com/ArtemOrl/topjava-1">Java Enterprise проект</a> с
-    регистрацией/авторизацией и интерфейсом на основе ролей (USER, ADMIN).
-    Администратор может создавать/редактировать/удалять пользователей, а пользователи - управлять своим
-    профилем и данными (день, еда, калории) через UI (по AJAX) и по REST интерфейсу с базовой авторизацией.
-    Возможна фильтрация данных по датам и времени, при этом цвет записи таблицы еды зависит от того, превышает ли
-    сумма
-    калорий за день норму (редактируемый параметр в профиле пользователя).
-    Весь REST интерфейс покрывается JUnit тестами, используя Spring MVC Test и Spring Security Test.
+    &nbsp;&nbsp;&nbsp;<a href="https://github.com/ArtemOrl/topjava-1">Java Enterprise project</a> with registration and authentication using roles (USER, ADMIN).
+    Admin can create/update/delete users, and the users can manage their
+    profiles and data (day, meal, calories) using UI (with AJAX) and REST interface with basic authorization.
+    The users can filter their data by date and time, the colors of records depends of quantity of calories per day
+    (this is an editable parameter in user profile).
+    All the REST interface is covered JUnit tests, using Spring MVC Test и Spring Security Test.
 </div>
 <jsp:include page="fragments/footer.jsp"/>
 <script type="text/javascript">
